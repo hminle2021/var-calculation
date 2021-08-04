@@ -44,6 +44,16 @@ wsd_pairs = w_sd_df['Currency Portfolio'].to_list()
 st.title("VaR Calculation")
 
 ### Get User Inputs
+
+hide_streamlit_menu = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+
+"""
+st.markdown(hide_streamlit_menu, unsafe_allow_html=True) 
+
 account = st.sidebar.number_input("Account $$$:")
 position = st.sidebar.number_input("Position %:")
 method = st.sidebar.selectbox(
